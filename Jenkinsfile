@@ -23,7 +23,7 @@ pipeline{
         }
         stage("Deploy on Test"){
             steps{
-               deploy adapters: [tomcat9(credentialsId: '7', path: '', url: 'http://192.168.159.130:8080')], contextPath: '/app', war: '**/*.war'
+               deploy adapters: [tomcat9(credentialsId: '9', path: '', url: 'http://192.168.159.130:8080')], contextPath: '/app', war: '**/*.war'
                 echo "========executing Deploy on container========"
             }
             
