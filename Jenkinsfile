@@ -9,10 +9,10 @@ pipeline{
     stages{
         stage("Test"){
             steps{
-                // mvn test
+                 slackSend channel: 'devops', message: 'Job Started'
                 sh 'mvn --version'
                 sh 'mvn test'
-                slackSend channel: 'devops', message: 'Job Started'
+              
                 echo "========executing Mvn Test========"
             }
             
