@@ -34,6 +34,7 @@ pipeline{
                 ok "Yes we Should"
             }
             steps {
+                deploy adapters: [tomcat9(credentialsId: '9', path: '', url: 'http://192.168.159.129:8080')], contextPath: '/app', war: '**/*.war'
                 echo "Deployong on Proddd"
             }
         }    
